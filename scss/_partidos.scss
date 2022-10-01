@@ -1,0 +1,36 @@
+#body-partidos {
+    width: 100%;
+    background: $gradiente-fondo;
+}
+#main-partidos{
+    padding: 0;
+
+}
+#caption{
+    color: $color-usos;
+    font-size: 25px;
+    font-family: $letra-subtitulos;
+    font-weight: bold;
+}
+#titulos-tabla{
+    font-size: 18px;
+    font-family: $letra-subtitulos;
+    
+}
+#tablas-partidos{
+    font-size: 14px;
+    padding: 20px;
+}
+.bordes-fotos{
+    border: 3px solid $color-usos;
+    margin-top: 45px;
+    box-shadow: 0px 0px 34px 6px rgba(39,68,214,1);
+    width: 550px;
+    height: 350px;
+}
+#tablas-ligas{
+    text-align: center;
+}
+.puntos{
+    background-color: aqua;
+}
