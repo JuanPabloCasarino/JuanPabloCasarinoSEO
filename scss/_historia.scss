@@ -1,17 +1,23 @@
 .fotos-historia{
-    display: flex;
-    justify-content: space-around;
     border: solid 3px black;
     border-radius: 20px;
-    background: url(../assets/img/footer.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    margin-right: 12px;
+    @extend .fondo-general;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.medidas-historia{
+    width: 500px;
+    height: 340px;
+    margin-top: 10px;
+    border-radius: 20px;
+    border-style: inset;
+    box-shadow: $sombra-celeste;
+}
+.bordes-historia{
+    text-align: center;
 }
 #primer-parrafo{
-    padding: 5px;
+    padding: 8px;
     margin-bottom: 15px;
     box-shadow: $sombra-celeste;
     border: $bordes-celestes;
@@ -34,12 +40,56 @@
 }
 #texto-marcado{
     width: 700px;
-    border: 3px solid $color-usos;
-    border-radius: 20px;
+    border: 3px solid map-get($map: $colores, $key: color-usos );
+    border-radius: 50px;
     padding: 10px;
-    background-color: $color-usos;
+    background-color: map-get($map: $colores, $key: color-usos );
     color: aliceblue ; 
-    font-size: 20px;
+    font-size: 18px;
+}
 
-    
+
+// MEDIA QUERIES
+
+@media screen and (max-width: 1210px) {
+    .medidas-historia{
+        width: 400px;
+        height: 270px;
+
+    }
+}
+@media screen and (max-width: 990px) {
+    #texto-marcado{
+        width: 500px;
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 768px) {
+    #texto-marcado{
+        border-radius: 30px;
+        width: 350px;
+        font-size: 12px;
+    }
+    #titulo-carta{
+        font-size: 18px;
+    }
+    .medidas-historia{
+        width: 350px;
+        height: 260px;
+
+    }
+}
+@media screen and (max-width: 510px) {
+    #texto-marcado{
+        width: 270px;
+
+    }
+    #titulo-carta{
+        font-size: 16px;
+    }
+    .medidas-historia{
+        width: 300px;
+        height: 220px;
+
+    }
 }

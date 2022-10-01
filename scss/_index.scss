@@ -1,6 +1,6 @@
 #body-index {
     width: 100%;
-    background: $gradiente-fondo;
+    background: map-get($map: $colores, $key:gradiente-fondo );
 }
 
 #main-index {
@@ -19,21 +19,17 @@
     border-radius: 10px;
     padding: 10px;
     margin-top: 10px;
-    background: url(../assets/img/footer.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    @extend .fondo-general;
     margin: 10px;
 }
 #tabla {
     text-align: center;
     margin-top: 30px;
     padding: 5px;
-    border: 4px solid $color_fondo;
+    border: 4px solid map-get($map: $colores, $key: color-fondo );
     border-radius: 10px;
-    color: $letras-claro;
-    background: url(../assets/img/footer.jpg) no-repeat center center fixed;
+    color: map-get($map: $colores, $key: letras-claro);
+    background: url(../assets/img/footer.webp) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -55,7 +51,7 @@
 }
 
 #copa {
-    border: 4px solid $color_fondo;
+    border: 4px solid map-get($map: $colores, $key: color-fondo);
     border-radius: 20px;
     margin-bottom: 20px;
 }
